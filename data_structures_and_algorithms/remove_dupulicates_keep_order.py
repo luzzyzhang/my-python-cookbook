@@ -24,7 +24,7 @@ print nlst
 # If sequence of unhashable types (such as dicts)
 # Both hashble and unhashble work well
 l_dct = [{'x': 1, 'y': 2}, {'x': 1, 'y': 3},
-         {'x': 1, 'y': 2}, {'x': 2, 'y': '4'}]
+         {'x': 1, 'y': 2}, {'x': 2, 'y': 4}]
 
 
 def dedupe_unhash(items, key=None):
