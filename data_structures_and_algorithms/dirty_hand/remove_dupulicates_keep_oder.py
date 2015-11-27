@@ -11,7 +11,8 @@ print nlst
 
 
 dcts = [{'x': 1, 'y': 2}, {'x': 1, 'y': 3},
-         {'x': 1, 'y': 2}, {'x': 2, 'y': '4'}]
+        {'x': 1, 'y': 2}, {'x': 2, 'y': '4'}]
+
 
 def dedupe_unhash(items, key=None):
     seen = set()
@@ -27,5 +28,3 @@ ndcts2 = list(dedupe_unhash(dcts, key=lambda dct: dct['y']))
 print ndcts2
 ndcts3 = list(dedupe_unhash(dcts, key=lambda d: d['x']))
 print ndcts3
-
-
