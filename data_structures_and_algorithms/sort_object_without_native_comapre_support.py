@@ -28,7 +28,7 @@ print users
 
 # Also can use operator.attrgetter()
 from operator import attrgetter
-n_users = [UserName(2, 'zhang', 'lu'), UserName(1, 'zhao', 'linpu'),
+n_users = [UserName(2, 'zhang', 'lu'), UserName(1, 'zhao', 'lingpu'),
            UserName(5, 'an', 'quan'), UserName(3, 'ce', 'shi')]
 sort_users = sorted(n_users, key=attrgetter('user_id'))
 min_user = min(n_users, key=attrgetter('user_id'))
