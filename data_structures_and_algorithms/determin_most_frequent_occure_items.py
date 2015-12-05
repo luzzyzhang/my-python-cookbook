@@ -36,4 +36,3 @@ print c
 d = a - b
 print 50*'*'
 print d
-
