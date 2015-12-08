@@ -17,3 +17,13 @@ print prices_sorted
 prices_names = zip(prices.values(), prices.keys())
 print min(prices_names)  # OK
 print max(prices_names)  # Oh no
+print 50*'*'
+dct = {'AAA': 45.23, 'ZZZ': 45.23}
+print min(zip(dct.values(), dct.keys()))
+print max(zip(dct.values(), dct.keys()))
+print 50*'~'
+# Not well
+print min(prices)
+print min(prices.values())
+print min(prices, key=lambda k: prices[k])
+print prices[min(prices, key=lambda k: prices[k])]
