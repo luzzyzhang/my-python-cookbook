@@ -32,3 +32,17 @@ print q.pop()
 print q.pop()
 print q.pop()
 print q.pop()
+# a = Item('foo')
+# b = Item('bar')
+# a < b
+# (priority, item) tuples can be compared priority different
+a = (1, Item('foo'))
+b = (5, Item('bar'))
+print a < b
+# c = (1, Item('grok'))
+# a < c
+a = (1, 0, Item('foo'))
+b = (5, 1, Item('bar'))
+c = (1, 2, Item('grok'))
+print a < b
+print a < c
