@@ -12,10 +12,9 @@ if __name__ == '__main__':
     with open('python.txt') as f:
         for line, prevlines in search(f, 'python', 5):
             for pline in prevlines:
+                print 50*'~'
                 print pline
-                print ''
             print line
-            print ''
             print 50*'*'
 
 # deque(maxlen=N) create fixed-sized queue. New items are added and the queue
