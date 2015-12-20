@@ -39,3 +39,17 @@ uname, *files, homedir, sh = line.split(':')
 print(uname)
 print(homedir)
 print(sh)
+# Unpack values and throw them away
+record = ('ACME' 50, 123.45, (12, 18, 2015))
+name, *_, (*_, year) = record
+print(name)
+print(year)
+items = [1, 10, 7, 4, 5, 9]
+head, *tail = items
+print(head)
+print(tail)
+# Recursion really isn't strong Python feature due to the inherent recursion
+def sum(items):
+    head, *tail = items
+    return head + sum(tail) if tail else head
+sum(items)
