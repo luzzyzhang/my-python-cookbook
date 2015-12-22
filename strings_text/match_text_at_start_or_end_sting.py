@@ -15,3 +15,21 @@ print specific
 py = any(name.endswith('.py') for name in filenames)
 print py
 
+# from urllib.request import urlopen  # python3
+from urllib2 import urlopen
+
+
+def read_data(name):
+    if name.startswith(('http:', 'https:', 'ftp:')):
+        return urlopen(name).read()
+    else:
+        with open(name) as f:
+            return f.read()
+read_data("http://www.baidu.com")
+# startswith first arg must be str or tuple of str
+choices = ['http:', 'ftp:']
+url = 'http://www.luzzyzhang.coom'
+# TypeError
+# url.startswith(choices) 
+url.startswith(tuple(choices))
+# Not elegant way
