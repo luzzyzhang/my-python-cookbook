@@ -32,4 +32,16 @@ url = 'http://www.luzzyzhang.coom'
 # TypeError
 # url.startswith(choices) 
 url.startswith(tuple(choices))
+# Check direcotry for the presence of certain kinds of files
+# if any(name.endswith(('.c', '.py')) for name in listdir(dirname)):
+
+
 # Not elegant way
+filename = 'spam.txt'
+filename[-4:] = '.txt'
+url = 'http:www.baidu.com'
+url[:5] == 'http:' or url[:6] == 'https:' or url[:4] == 'ftp:'
+# Work but not better
+import re
+url = 'http://www.python.org'
+re.match('http:|https:|ftp:', url)
