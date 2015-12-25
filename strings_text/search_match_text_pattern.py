@@ -56,8 +56,19 @@ print all_match
 for month, day, year in all_match:
     print '{}-{}-{}'.format(month, day, year)
 # findall() method find all matches, return them as list,
-# If match iteractively user finditer() method 
+# If match iteractively user finditer() method
 print 50*'='
 print datepat.finditer(text)
 for m in datepat.finditer(text):
     print m.groups()
+# match() method only checks the begiinning of a string
+m = datepat.match('11/23/2015abcdefg')
+print m
+print m.group()
+# For exact match include $ marker
+detapat = re.compile(r'(\d+)/(\d+)/(\d+)$')
+print detapat.match('11/11/2011/dourimifasolaxi')
+print detapat.match('11/11/2011')
+# Simple text match/search use module-level funcions,but if perform a lot of
+# matching or searching use compile pattern first use it over and over again
+print re.findall(r'(\d+)/(\d+)/(\d+)', text)
