@@ -10,7 +10,10 @@ print new_text
 def matchcase(word):
     print 50*'*'
     def replace(m):
+        print m
         text = m.group()
+        print 50*'+'
+        print text
         if text.isupper():
             return word.upper()
         elif text.islower():
