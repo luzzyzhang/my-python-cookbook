@@ -8,6 +8,7 @@ print new_text
 
 
 def matchcase(word):
+    print 50*'*'
     def replace(m):
         text = m.group()
         if text.isupper():
@@ -18,6 +19,7 @@ def matchcase(word):
             return word.capitalize()
         else:
             return word
+    return replace
 
 texts = 'UPPER PYTHON, lower python, Mixed Python'
 case_replace = re.sub('python', matchcase('snake'), texts, flags=re.IGNORECASE)
