@@ -24,3 +24,16 @@ t4 = unicodedata.normalize('NFD', s2)
 print(t3 == t4)
 print(ascii(t3))
 print(ascii(t4))
+print(50*'-')
+# Normalizatin forms NFKC and NFKD
+s = '\ufb01'
+print(s)
+print(unicodedata.normalize('NFD', s))
+# combined letters are broken apart
+print(unicodedata.normalize('NFKD', s))
+print(unicodedata.normalize('NFKC', s))
+print(50*'=')
+# Sanitizing and filtering text, example remove all diacritical marks from text
+t1 = unicodedata.normalize('NFD', s1)
+nt = ''.join(c for c in t1 if not unicodedata.combining(c))
+print(nt)
