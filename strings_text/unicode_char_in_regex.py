@@ -9,7 +9,7 @@ print num.match('\0661\0662\0663')
 arabic = re.compile('[\u0600-\u06ff\u0750-\u077f\u08a0-\u08ff]+')
 # Normalize all text to a standard
 pat = re.compile('stra\u00dfe', re.IGNORECASE)
-print \u00df
+print '\u00df'
 # print pat.match(s)
 # print s.upper()
 # print pat.match(s.upper())
