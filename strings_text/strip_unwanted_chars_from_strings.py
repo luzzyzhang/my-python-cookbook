@@ -19,3 +19,8 @@ s = 'hello     world    \n'
 print s.replace(' ', '')
 import re
 print re.sub('\s+', ' ', s)
+# Common use case
+with open(filename) as f:
+    lines = (line.strip() for line in f)
+    for line in lines:
+        do_something
