@@ -1,4 +1,4 @@
-# my_python_cookbook
+# My Python Cookbook
 1. Data Structures and Algorithms
 2. Strings and Text
 3. Numbers,Dates,and Times
