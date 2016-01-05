@@ -1,4 +1,4 @@
-# python_cook_book_lz
+# my_python_cookbook
 1. Data Structures and Algorithms
 2. Strings and Text
 3. Numbers,Dates,and Times
