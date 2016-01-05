@@ -7,7 +7,7 @@ print(a)
 # Strip diacritical marks
 import unicodedata
 import sys
-# Dictionary mapping every Unicode combing character to None
+# Create a dictionary to map every Unicode combing character to None
 cmb_chrs = dict.fromkeys(c for c in range(sys.maxunicode)
                          if unicodedata.combining(chr(c)))
 # print(cmb_chrs)
