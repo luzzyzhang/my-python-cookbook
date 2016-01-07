@@ -28,3 +28,9 @@ print(a)
 b = unicodedata.normalize('NFD', a)
 print(b.encode('ascii', 'ignore'))
 print(b.encode('ascii', 'ignore').decode('ascii'))
+# For simple stuation the faster way
+def clean_spaces(s):
+    s = s.replace('\r', '')
+    s = s.replace('\t', '')
+    s = s.replace('\f', '')
+    return s
