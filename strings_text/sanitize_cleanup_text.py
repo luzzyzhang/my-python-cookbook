@@ -22,3 +22,9 @@ print(len(digitmap))
 # Arabic digits
 x = '\u0661\u0662\u0663'
 print(x.translate(digitmap))
+print(50*'*')
+a = 'pÿthöñ is awesome\n'
+print(a)
+b = unicodedata.normalize('NFD', a)
+print(b.encode('ascii', 'ignore'))
+print(b.encode('ascii', 'ignore').decode('ascii'))
