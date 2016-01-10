@@ -56,6 +56,7 @@ with open('test.txt', 'w') as f:
 
 print 50*'*'
 # Combination of parts into buffers and larger I/O operations
+# Smart combining I/O operations(large or small)
 
 
 def combine(source, maxsize):
