@@ -56,13 +56,14 @@ with open('test.txt', 'w') as f:
 
 print 50*'*'
 # Combination of parts into buffers and larger I/O operations
+
+
 def combine(source, maxsize):
     parts = []
     size = 0
     for part in source:
         parts.append(part)
         size += len(part)
-        print size
         if size > maxsize:
             yield '$'.join(parts)
             parts = []
