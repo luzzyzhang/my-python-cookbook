@@ -23,3 +23,12 @@ class SafeSub(dict):
         return '{' + key + '}'
 del n  # Make sure n is undefined
 print(s.format_map(SafeSub(vars())))
+# If frequently use, "frame hack"
+import sys
+def sub(text):
+    return text.format_map(SafeSub(sys._getframe().f_locals))
+name = 'IIIII'
+n = 10086
+print(sub('Hello {name}'))
+print(sub('Ok {n} aa'))
+print(sub('You favor aha {color}'))
