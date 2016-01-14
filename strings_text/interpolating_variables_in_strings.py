@@ -32,3 +32,11 @@ n = 10086
 print(sub('Hello {name}'))
 print(sub('Ok {n} aa'))
 print(sub('You favor aha {color}'))
+# Not best
+girl = 'LZP'
+m = 1314
+# print('%(girl) has %(m) messages.' % vars())
+import string
+s = string.Template('$girl has $m messages.')
+ns = s.substitute(vars())
+print(ns)
