@@ -9,7 +9,7 @@ t = 'Spicy Jalapeño'
 nt = t.encode('ascii', errors='xmlcharrefreplace')
 print(nt)
 print(50*'~')
-s = 'Spicy &quot;Jalape&#241;o&quote.'
+s = 'Spicy &lt;&quot;Jalape&#241;o&quote.&gt'
 from html.parser import HTMLParser
 p = HTMLParser()
 print(p.unescape(s))
