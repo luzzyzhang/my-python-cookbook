@@ -1,5 +1,5 @@
 # Parse string left to right into a stream of tokens
-text = 'foo = 23 + 42 * 10'
+# text = 'foo = 23 + 42 * 10'
 # Turn the string into a sequence of pairs like this:
 tokens = [('NAME', 'foo'), ('EQ', '='), ('NUM', '23'),
           ('PLUS', '+'), ('NUM', '42'), ('TIMES', '*'), ('NUM', '10')]
@@ -23,4 +23,9 @@ def generate_tokens(pat, text):
         yield Token(m.lastgroup, m.group())
 # Example use
 for tok in generate_tokens(master_pat, 'foo = 42'):
+    print tok
+print 50*'~'
+text = 'foo = 23 + 42 * 10'
+tokens = (tok for tok in generate_tokens(master_pat, text) if tok.type != 'WS')
+for tok in tokens:
     print tok
