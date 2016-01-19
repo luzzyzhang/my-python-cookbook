@@ -11,6 +11,7 @@ TIMES = r'(?P<TIMES>\*)'
 EQ = r'(?P<EQ>=)'
 WS = r'(?P<WS>\s+)'
 master_pat = re.compile('|'.join([NAME, NUM, PLUS, TIMES, EQ, WS]))
+print '|'.join([NAME, NUM, PLUS, TIMES, EQ, WS])
 scanner = master_pat.scanner('foo = 42')
 print scanner.match()
 from collections import namedtuple
