@@ -30,3 +30,16 @@ text = 'foo = 23 + 42 * 10'
 tokens = (tok for tok in generate_tokens(master_pat, text) if tok.type != 'WS')
 for tok in tokens:
     print tok
+
+print 50*'='
+LT = r'(?P<LT><)'
+LE = r'(?P<LE><=)'
+EQ = r'(?P<EQ>=)'
+# master_pat = re.compile('|'.join([LE, LT, EQ]))  # Correct
+# master_pat = re.compile('|'.join([LT, LE, EQ]))  # Incorrect
+PRINT = r'(?P<PRINT>print)'
+NAME = r'(?P<NAME>[a-zA-Z_][a-zA-Z_0-9]*)'
+master_pat = re.compile('|'.join([PRINT, NAME]))
+for tok in generate_tokens(master_pat, 'printer'):
+    print tok
+
