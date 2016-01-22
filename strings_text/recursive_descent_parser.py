@@ -97,3 +97,6 @@ class ExpressionEvaluator:
             return exprval
         else:
             raise SyntaxError('Expected NUMBER or LPAREN')
+
+
+# Examples of use ExpressionEvaluator class
