@@ -58,7 +58,7 @@ class ExpressionEvaluator:
     def _expect(self, toktype):
         'Consume next token if it matches toktype or raise SyntaxError'
         if not self._accept(toktype):
-            raise SyntaxError('Expected', + toktype)
+            raise SyntaxError('Expected' + toktype)
 
     # Grammr rules follow
     def expr(self):
@@ -93,10 +93,17 @@ class ExpressionEvaluator:
             return int(self.tok.value)
         elif self._accept('LPAREN'):
             exprval = self.expr()
-            self._expect('PAREN')
+            self._expect('RPAREN')
             return exprval
         else:
             raise SyntaxError('Expected NUMBER or LPAREN')
 
 
 # Examples of use ExpressionEvaluator class
+print(50*'#')
+e = ExpressionEvaluator()
+print(e.parse('2'))
+print(e.parse('2 + 3'))
+print(e.parse('2 + 3*4'))
+print(e.parse('2 + (3 + 4)*5'))
+print(e.parse('2 + (3 + * 4)'))
