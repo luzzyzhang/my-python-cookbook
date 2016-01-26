@@ -101,9 +101,9 @@ class ExpressionEvaluator:
 
 # Examples of use ExpressionEvaluator class
 print(50*'#')
-e = ExpressionEvaluator()
-print(e.parse('2'))
-print(e.parse('2 + 3'))
-print(e.parse('2 + 3*4'))
-print(e.parse('2 + (3 + 4)*5'))
-print(e.parse('2 + (3 + * 4)'))
+if __name__ == '__main__':
+    e = ExpressionEvaluator()
+    print(e.parse('2'))
+    print(e.parse('2 + 3'))
+    print(e.parse('2 + 3 * 4'))
+    print(e.parse('2 + (3 + 4) * 5'))
