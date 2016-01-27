@@ -72,6 +72,7 @@ class ExpressionEvaluator:
                 exprval += right
             elif op == 'MINUS':
                 exprval -= right
+        return exprval
 
     def term(self):
         "term ::= factor { ('*'|'/') factor }*"
