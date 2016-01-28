@@ -108,3 +108,44 @@ if __name__ == '__main__':
     print(e.parse('2 + 3'))
     print(e.parse('2 + 3 * 4'))
     print(e.parse('2 + (3 + 4) * 5'))
+
+
+# Example of tree builder
+class ExpressionTreeBuilder(ExpressionEvaluator):
+    def expr(self):
+        "expression ::= term { ('+'|'-') term }"
+
+        exprval = self.term()
+        while self._accept('PLUS') or self._accept('MINUS'):
+            op = self.tok.type
+            right = self.term()
+            if op == 'PLUS':
+                exprval = ('+', exprval, right)
+            elif op == 'MINUS':
+                exprval = ('-', exprval, right)
+        return exprval
+
+    def term(self):
+        "term ::= factor { ('*'|'/') factor }"
+
+        termval = self.factor()
+        while self._accept('TIMES') or self._accept('DIVIDE'):
+            op = self.tok.type
+            right = self.factor()
+            if op == 'TIMES':
+                termval = ('*', termval, right)
+            elif op == 'DIVIDE':
+                termval = ('/', termval, right)
+        return termval
+
+    def factor(self):
+        "factor ::= NUM | ( expr )"
+
+        if self._accept('NUM'):
+            return int(self.tok.value)
+        elif self._accept('LPAREN'):
+            exprval = self.expr()
+            self._expect('RPAREN')
+            return exprval
+        else:
+            raise SyntaxError('Expected NUMBER or LPAREN')
