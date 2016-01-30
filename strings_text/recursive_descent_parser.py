@@ -149,3 +149,10 @@ class ExpressionTreeBuilder(ExpressionEvaluator):
             return exprval
         else:
             raise SyntaxError('Expected NUMBER or LPAREN')
+
+
+if __name__ == '__main__':
+    e = ExpressionTreeBuilder()
+    print(e.parse('2 + 3'))
+    print(e.parse('2 + 3*4'))
+
