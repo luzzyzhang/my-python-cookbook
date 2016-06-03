@@ -16,4 +16,3 @@
 15. C Extensions
 EveryDay ProgrammingPracitce
 Read & Write
-BetterSuperman
