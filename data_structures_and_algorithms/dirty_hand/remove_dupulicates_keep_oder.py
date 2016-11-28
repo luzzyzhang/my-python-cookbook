@@ -1,9 +1,11 @@
+# -*- coding: utf-8 -*-
 def dedupe(items):
     seen = set()
     for item in items:
         if item not in seen:
             yield item
             seen.add(item)
+
 
 lsts = [1, 2, 3, 3, 2, 5, 3, 4, 4]
 nlst = list(dedupe(lsts))
@@ -21,6 +23,7 @@ def dedupe_unhash(items, key=None):
         if val not in seen:
             yield item
             seen.add(val)
+
 
 ndcts = list(dedupe_unhash(dcts, key=lambda d: (d['x'], d['y'])))
 print ndcts

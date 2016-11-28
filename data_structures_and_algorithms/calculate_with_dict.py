@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Perform calculations on dictionary data
 prices = {
     'ACME': 45.23,
