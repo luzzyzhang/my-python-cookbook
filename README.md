@@ -1,6 +1,4 @@
-# My Python Cookbook
-## Read & Write
-## Recipes collections
+# My Python Cookbook(Recipes collections)
 1. Data Structures and Algorithms
 2. Strings and Text
 3. Numbers,Dates,and Times
