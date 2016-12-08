@@ -1,4 +1,6 @@
 # My Python Cookbook
+## Read & Write
+## Recipes collections
 1. Data Structures and Algorithms
 2. Strings and Text
 3. Numbers,Dates,and Times
@@ -14,5 +16,3 @@
 13. Utility Scripting and System Administration
 14. Testing,Debugging,and Exceptions
 15. C Extensions
-Read & Write
-Recipes collections
