@@ -5,16 +5,14 @@ from collections import Counter
 
 def word_count(filename):
     wc = {}
-    # Solution one
-    with open(filename, 'r') as f:
-        words = f.read().lower().split()
+    # with open(filename, 'r') as f:
+    #     words = f.read().lower().split()
     # for word in words:
     #     if word not in wc:
     #         wc[word] = 1
     #     else:
     #         wc[word] += 1
-    wc = Counter(words)
-    # Solution two
+    # or
     # with open(filename, 'r') as f:
     #     for line in f:
     #         words = line.lower().split()
@@ -23,7 +21,10 @@ def word_count(filename):
     #                 wc[word] = 1
     #             else:
     #                 wc[word] += 1
-
+    # or
+    with open(filename, 'r') as f:
+        words = f.read().lower().split()
+    wc = Counter(words)
     return wc
 
 
