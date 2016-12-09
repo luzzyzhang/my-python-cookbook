@@ -29,16 +29,22 @@ def word_count(filename):
 
 def print_words(filename):
     wc = word_count(filename)
-    for word, count in sorted(zip(wc.keys(), wc.values())):
+    # for word, count in sorted(zip(wc.keys(), wc.values())):
+    #     print word, count
+    # or
+    # for word, count in sorted(wc.items()):
+    #     print word, count
+    # or
+    for word, count in sorted(wc.items()):
         print word, count
 
 
 def print_top(filename, n=20):
     wc = word_count(filename)
-    for count, word in sorted(zip(wc.values(), wc.keys()), reverse=True)[0:n]:
-        print word, count
-    # Other method
-    for word, count in wc.most_common(3):
+    # for count, word in sorted(zip(wc.values(), wc.keys()), reverse=True)[:n]:
+    #     print word, count
+    # or
+    for word, count in wc.most_common(n):
         print word, count
 
 
