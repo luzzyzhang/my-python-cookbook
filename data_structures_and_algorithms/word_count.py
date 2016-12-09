@@ -33,9 +33,6 @@ def print_words(filename):
     # for word, count in sorted(zip(wc.keys(), wc.values())):
     #     print word, count
     # or
-    # for word, count in sorted(wc.items()):
-    #     print word, count
-    # or
     for word, count in sorted(wc.items()):
         print word, count
 
