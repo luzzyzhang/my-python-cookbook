@@ -44,7 +44,10 @@ def print_top(filename, n=20):
     # for count, word in sorted(zip(wc.values(), wc.keys()), reverse=True)[:n]:
     #     print word, count
     # or
-    for word, count in wc.most_common(n):
+    # for word, count in wc.most_common(n):
+    #     print word, count
+    # or
+    for word, count in sorted(wc.items(), key=lambda x: x[1], reverse=True):
         print word, count
 
 
