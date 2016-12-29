@@ -34,7 +34,8 @@ if __name__ == '__main__':
     print 50*'-'
 
     # Use gengerator expression
-    print sum((x**2 for x in range(1000001)))
+    # print sum((x**2 for x in range(1000001)))
+    print sum(x**2 for x in range(1000001))
     g = (x**2 for x in range(11))
     print g, next(g), next(g), next(g)
     print sum(g)
