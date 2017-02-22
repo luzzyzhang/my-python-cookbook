@@ -17,3 +17,7 @@ if __name__ == '__main__':
     pair = Pair(1, 2)
     pair
     print(pair)
+    # special !r formatting code indicates that the output of __repr__
+    # should be used instead of __str__()
+    print('p is {0!r}'.format(pair))
+    print('p is {0}'.format(pair))
