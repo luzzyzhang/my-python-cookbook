@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
-
+"""
+Google Search
+how to use list comprehension to add an element to copies of a dictionary
+"""
 
 class Building(object):
     def __init__(self, x):
