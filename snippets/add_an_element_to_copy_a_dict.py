@@ -4,6 +4,7 @@ Google Search
 how to use list comprehension to add an element to copies of a dictionary
 """
 
+
 class Building(object):
     def __init__(self, x):
         self.x = x
@@ -12,13 +13,11 @@ class Building(object):
         return '<{0.x}>'.format(self)
 
     def lst_of_dct(self, lst, common):
-        self.lst = lst
-        self.common = common
         # return = [dict(id=i, **self.common) for i in self.lst]
 
         # This way raise SyntaxError: non-keyword arg after keyword arg
-        # return [dict(mid=i, self.common) for i in self.lst]
-        return [dict(self.common, mid=i) for i in self.lst]
+        # return [dict(mid=i, common) for i in self.lst]
+        return [dict(common, mid=i) for i in lst]
 
 
 def foo(lst):
