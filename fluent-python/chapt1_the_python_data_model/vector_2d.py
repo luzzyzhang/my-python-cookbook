@@ -3,7 +3,7 @@
 from math import hypot
 
 
-class Vector:
+class Vector(object):
     """
     >>> v1 = Vector(2, 4)
     >>> v2 = Vector(2, 1)
@@ -43,4 +43,3 @@ class Vector:
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
-    print('Test pass')
