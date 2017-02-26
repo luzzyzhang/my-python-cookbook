@@ -7,6 +7,17 @@ Card = collections.namedtuple('Card', ['rank', 'suit'])
 
 
 class FrenchDeck:
+    """
+    >>> deck = FrenchDeck()
+    >>> len(deck)
+    52
+    >>> print(deck[0])
+    Card(rank='2', suit='spades')
+    >>> deck[0]
+    Card(rank='2', suit='spades')
+    >>> deck[-1]
+    Card(rank='A', suit='hearts')
+    """
     ranks = [str(n) for n in range(2, 11)] + list('JQKA')
     suits = 'spades diamonds clubs hearts'.split()
 
@@ -30,10 +41,12 @@ def spades_high(card):
 
 
 if __name__ == '__main__':
-    beer_card = Card('7', 'diamonds')
-    print(beer_card)
-    print(50*'~')
-    deck = FrenchDeck()
+    import doctest
+    doctest.testmod()
+    # beer_card = Card('7', 'diamonds')
+    # print(beer_card)
+    # print(50*'~')
+    # deck = FrenchDeck()
     # print(len(deck))
     # print(deck[0])
     # print(deck[-1])
@@ -45,5 +58,5 @@ if __name__ == '__main__':
     # print(50*'*')
     # for card in reversed(deck):
     #     print(card)
-    for card in sorted(deck, key=spades_high):
-        print(card)
+    # for card in sorted(deck, key=spades_high):
+    #     print(card)
