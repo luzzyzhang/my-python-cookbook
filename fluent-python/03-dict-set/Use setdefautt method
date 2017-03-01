@@ -1,0 +1,1 @@
+index.py uses dict.setdefault to fetch and update a list of word occur‐ rences from the index in a single line
