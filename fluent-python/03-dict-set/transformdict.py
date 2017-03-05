@@ -1,3 +1,13 @@
+"""Transformdict: a mapping that transforms keys on lookup
+This module and ``test_transformdict.py`` were extracted from a
+patch contributed to Python by Antoine Pitrou implementing his
+PEP 455 -- Adding a key-transforming dictionary to collections.
+As of Nov. 14, 2014, the patch was not yet merged to Python 3.5
+(which is in pre-alpha). The patch is ``transformdict3.patch``,
+part of issue #18986: Add a case-insensitive case-preserving dict.
+http://bugs.python.org/issue18986
+"""
+
 from collections.abc import MutableMapping
 
 
@@ -5,22 +15,22 @@ _sentinel = object()
 
 
 class TransformDict(MutableMapping):
-    """Dictionary that class a transformation function
-       when looking up keys, but preserves the origin keys.
+    '''Dictionary that calls a transformation function when looking
+    up keys, but preserves the original keys.
     >>> d = TransformDict(str.lower)
     >>> d['Foo'] = 5
-    >>> d['foo'] == d['Foo'] == d['Foo'] == 5
+    >>> d['foo'] == d['FOO'] == d['Foo'] == 5
     True
     >>> set(d.keys())
     {'Foo'}
-    """
+    '''
 
     __slots__ = ('_transform', '_original', '_data')
 
     def __init__(self, transform, init_dict=None, **kwargs):
         '''Create a new TransformDict with the given *transform* function.
-        *init_dict* and *kwargs* are optional initializers,
-        as in the dict constructor.
+        *init_dict* and *kwargs* are optional initializers, as in the
+        dict constructor.
         '''
         if not callable(transform):
             msg = 'expected a callable, got %r'
@@ -44,9 +54,9 @@ class TransformDict(MutableMapping):
     @property
     def transform_func(self):
         "This TransformDict's transformation function"
-        return self._transfom
+        return self._transform
 
-    # Minium set of methods required for MutableMapping
+    # Minimum set of methods required for MutableMapping
 
     def __len__(self):
         return len(self._data)
@@ -126,8 +136,3 @@ class TransformDict(MutableMapping):
             equiv = list(self.items())
         return '%s(%r, %s)' % (self.__class__.__name__,
                                self._transform, repr(equiv))
-
-
-if __name__ == '__main__':
-    import doctest
-    doctest.testmod()
