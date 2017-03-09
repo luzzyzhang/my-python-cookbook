@@ -1,9 +1,9 @@
 """
 >>> bingo = BingoCage(range(3))
 >>> bingo.pick()
-1
->>> bingo()
 0
+>>> bingo()
+1
 >>> callable(bingo)
 True
 """
@@ -25,3 +25,8 @@ class BingoCage:
 
     def __call__(self):
         return self.pick()
+
+
+if __name__ == '__main__':
+    bingo = BingoCage(range(10))
+    print(bingo())

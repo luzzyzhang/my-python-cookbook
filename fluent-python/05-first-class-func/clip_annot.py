@@ -18,7 +18,7 @@
 """
 
 
-def clip(text, max_len=80):
+def clip(text: str, max_len: 'int > 0'=80) -> str:
     """Return text clipped at the last space before or after max_len
     """
     end = None
@@ -30,6 +30,7 @@ def clip(text, max_len=80):
             space_after = text.rfind(' ', max_len)
             if space_after >= 0:
                 end = space_after
+
     if end is None:
         end = len(text)
     return text[:end].rstrip()
