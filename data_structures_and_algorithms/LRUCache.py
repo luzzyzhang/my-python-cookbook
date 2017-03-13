@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 class LRUCache:
-
     def __init__(self, user_function, maxsize=1024):
         # Link layout:     [PREV, NEXT, KEY, RESULT]
         self.root = root = [None, None, None, None]
