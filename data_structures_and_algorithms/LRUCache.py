@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-class LRU_Cache:
+class LRUCache:
 
     def __init__(self, user_function, maxsize=1024):
         # Link layout:     [PREV, NEXT, KEY, RESULT]
@@ -39,6 +39,6 @@ class LRU_Cache:
 
 
 if __name__ == '__main__':
-    p = LRU_Cache(ord, maxsize=3)
+    p = LRUCache(ord, maxsize=3)
     for c in 'abcdecaeaa':
         print(c, p(c))
