@@ -1,2 +1,0 @@
-import timeit
-print(timeit('math.sqrt(2)', 'import math'))
