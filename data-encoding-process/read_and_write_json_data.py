@@ -17,10 +17,11 @@ class Point(object):
         self.x = x
         self.y = y
 
+
 def encode_complex(obj):
     if isinstance(obj, complex):
         return [obj.real, obj.imag]
-    raise TypeError(repr(o) + " is not JSON serializable")
+    raise TypeError(repr(obj) + " is not JSON serializable")
 
 
 if __name__ == '__main__':
