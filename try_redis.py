@@ -8,12 +8,12 @@ import redis
 r = redis.Redis(host='localhost', port=6379, db=0)
 # r.set('foo', '1')
 
-if not r.get('mytest'):
-    r.set('mytest', 1)
-    print(r.get('mytest'))
-elif int(r.get('mytest')) == 3:
+if not r.get('lr'):
+    r.set('lr', 1)
+    print(r.get('lr'))
+elif int(r.get('lr')) == 3:
     print('Stop')
-    print(r.get('mytest'))
+    print('Now you have get {} times play'.format(int(r.get('lr'))))
 else:
-    r.incr('mytest')
-    print(r.get('mytest'))
+    r.incr('lr')
+    print(r.get('lr'))
