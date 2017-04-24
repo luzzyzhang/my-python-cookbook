@@ -23,11 +23,11 @@ if __name__ == '__main__':
     def foo(*args, **kwargs):
         custom = args[0]
         if custom.serverget:
-            print('c')
-        elif custom.serverpost:
             print('a')
-        else:
+        elif custom.serverpost:
             print('b')
+        else:
+            print('c')
         api_params_map = {'test': 'Just for fun'}
         if custom.api:
             print(api_params_map.get(custom.api, 'Nont found'))
