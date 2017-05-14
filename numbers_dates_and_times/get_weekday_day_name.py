@@ -4,7 +4,7 @@
 import calendar
 import locale
 from datetime import datetime
-locale.setlocale(locale.LC_ALL, 'zh_CN')
+locale.setlocale(locale.LC_ALL, 'zh_CN.UTF-8')
 
 
 now = datetime.now()
