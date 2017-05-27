@@ -52,20 +52,20 @@ def hello(a1, a2, a3, a4):
 
 if __name__ == '__main__':
     print("After decoration")
-    print 20*'.' + ' 不带参数 ' + 20*'.'
-    print 50*'-'
+    print(20*'.' + ' 不带参数 ' + 20*'.')
+    print(50*'-')
     print("Preparing to call say_hello()")
     say_hello("say", "hello", "argument", "list")
     print("After first say_hello() call")
-    print 50*'*'
+    print(50*'*')
     say_hello("a", "different", "set of", "arguments")
     print("After second say_hello() call")
-    print 20*'-' + ' 带参数 ' + 20*'-'
+    print(20*'-' + ' 带参数 ' + 20*'-')
     print("After decoration")
-    print 50*'-'
+    print(50*'-')
     print("Preparing to call hello()")
     hello("say", "hello", "argument", "list")
     print("After first hello() call")
-    print 50*'*'
+    print(50*'*')
     hello("a", "different", "set of", "arguments")
     print("After second say_hello() call")
