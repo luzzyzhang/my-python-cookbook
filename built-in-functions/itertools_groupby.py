@@ -53,3 +53,6 @@ class my_groupby:
             except StopIteration:
                 return
             self.currkey = self.keyfunc(self.currvalue)
+
+print([k for k, g in my_groupby('AAAABBBCCDAABBB')])   # --> A B C D A B
+print([list(g) for k, g in my_groupby('aaaabbbccd')])  # --> aaaa bbb cc d
