@@ -21,7 +21,7 @@ logger = logging.getLogger('my_app')
 logger.setLevel(logging.DEBUG)
 
 # create file handler which logs even debug message
-fh = logging.FileHandler('info.log')
+fh = logging.FileHandler('debug.log')
 feh = logging.FileHandler('error.log')
 fh.setLevel(logging.DEBUG)
 feh.setLevel(logging.ERROR)
