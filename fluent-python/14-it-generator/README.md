@@ -1,4 +1,5 @@
 ## iterable
+
 	```
 		Any object from which the iter built-in function can obtain an iterator.
         Objects implementing an __iter__ method returning an iterator are iterable.
@@ -7,6 +8,7 @@
 	```
 
 ## iterator
+
 	```
         Any object that implements the __next__ no-argument method
         which returns the next item in a series or raises StopIteration
