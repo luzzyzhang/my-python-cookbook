@@ -53,3 +53,25 @@ logger.info('`Calling` auxiliary.Auxiliary.something_function()')
 auxiliary.some_function()
 logger.info('`Done` with auxiliary.some_function()')
 logger.error('This is error log for test')
+
+# Test logger
+test_logger = logging.getLogger('test')
+test_logger.setLevel(logging.DEBUG)
+
+fth = logging.FileHandler('test.log')
+fth.setLevel(logging.DEBUG)
+
+fth.setFormatter(logging.Formatter(fmt))
+
+test_logger.addHandler(fth)
+
+test_logger.info('I acccess into your fields')
+test_logger.debug('You acccess into your fields')
+test_logger.error('She acccess into your fields')
+
+
+
+
+
+
+
