@@ -19,9 +19,9 @@
 
 ### Filtering generator functions
 
-    |module|function|description|
-    |---|---|---|
-    |itertools|compress(it, selector_it)|consumes two iterables in parallel; yields items from it whenever the corresponding item inselector_itis truthy|
+|module|function|description|
+|---|---|---|
+|itertools|compress(it, selector_it)|consumes two iterables in parallel; yields items from it whenever the corresponding item inselector_itis truthy|
 
 ### Mapping generator functions
 
