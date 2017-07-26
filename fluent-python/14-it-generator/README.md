@@ -14,3 +14,19 @@
     which returns the next item in a series or raises StopIteration when there are no more items.
     Python iterators also implement the __iter__ method so they are iterable as well.
 ```
+
+## Generator functions in standard library
+
+### Filtering generator functions
+
+    |module|function|description|
+    |---|---|---|
+    |itertools|compress(it, selector_it)|consumes two iterables in parallel; yields items from it whenever the corresponding item inselector_itis truthy|
+
+### Mapping generator functions
+
+### Generator functions that merge multiple input iterables.
+
+### Generator functions that expand each input item into multiple output items.
+
+### Rearranging generator functions
