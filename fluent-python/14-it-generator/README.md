@@ -19,7 +19,6 @@
 
 ### Filtering generator functions
 
-`
   |module|function|description|
   |---|---|---|
   |itertools|`compress(it, selector_it)`|consumes two iterables in parallel; yields items from it whenever the corresponding item inselector_itis truthy|
@@ -27,7 +26,6 @@
   |itertools|`filterfalse(predicate, it)`|same as filter, with the predicate logic negated: yields items whenever predicate computes falsy|
   |itertools|`islice(it, stop)` or `islice(it, start, stop, step=1)`|yields items from a slice of it, similar tos[:stop]or s[start:stop:step] except it can be any iterable, and the operation is lazy|
   |itertools|`takewhile(predi cate, it)`|yields items whilepredicatecomputes truthy, then stops and no further checks are made|
-`
 
 ### Mapping generator functions
 
