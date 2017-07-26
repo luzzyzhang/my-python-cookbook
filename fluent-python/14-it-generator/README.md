@@ -19,7 +19,7 @@
 
 ### Filtering generator functions
 
-|module|function|description|
+    |module|function|description|
     |---|---|---|
     |itertools|compress(it, selector_it)|consumes two iterables in parallel; yields items from it whenever the corresponding item inselector_itis truthy|
     |(built-in)|filter(predicate, it)|appliespredicateto each item ofiterable, yielding the item if predicate(item) is truthy; if predicate is None, only truthy items are yielded|
