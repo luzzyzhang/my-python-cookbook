@@ -61,12 +61,12 @@
 
 |module|function|description|
 |---|---|---|
-|itertools|`combinations(it, out_len)`|yield combinations ofout_lenitems from the items yielded byit|
-|itertools|`combinations_with_replacement(it, out_len)||
-|itertools|`count(start=0, step=1)`|yield combinations ofout_lenitems from the items yielded byit,
+|itertools|`combinations(it, out_len)`|yield combinations of out_len items from the items yielded by it|
+|itertools|`combinations_with_replacement(it, out_len)`|yield combinations ofout_lenitems from the items yielded byit,
 including combinations with repeated items.|
-|itertools|`permutations(it, out_len=None)`|yields numbers starting atstart, incremented bystep, indefinitely
-yields items fromitstoring a copy of each, then yields the entire sequence repeatedly, indefinitely|
-|itertools|`repeat(item, [times])`|yield permutations ofout_lenitems from the items yielded byit; by default,out_lenislen(list(it))|
+|itertools|`count(start=0, step=1)`|yields numbers starting atstart, incremented bystep, indefinitely|
+|itertools|`permutations(it, out_len=None)`|yields items fromitstoring a copy of each, then yields the entire sequence repeatedly, indefinitely
+|
+|itertools|`repeat(item, [times])`|yield permutations ofout_lenitems from the items yielded byit; by default,out_len is len(list(it))|
 
 ### Rearranging generator functions
