@@ -30,20 +30,21 @@
 
 ### Mapping generator functions
 
-    |module|function|description|
-    |---|---|---|
-    |itertools|`accumulate(it, [func])`| yields accumulated sums; if func is provided, yields the result of applying it the first pair of items, then to the first result and next item etc.|
-    |(built-in)|`enumerate(iterable, start=0)`| yields 2-tuples of the form (index, item), where index is counted from start, and item is taken from the iterable|
-    |(built-in)|`map(func, it1, [it2, ..., itN])`| appliesfuncto each item ofit, yielding the result; if N iterables are given,func must take N arguments and the iterables will be consumed in parallel|
-    |itertools|`starmap(func, it)`|appliesfuncto each item ofit, yielding the result; the input iterable should yield iterable itemsiit, andfuncis applied as func(*iit)|
+|module|function|description|
+|---|---|---|
+|itertools|`accumulate(it, [func])`| yields accumulated sums; if func is provided, yields the result of applying it the first pair of items, then to the first result and next item etc.|
+|(built-in)|`enumerate(iterable, start=0)`| yields 2-tuples of the form (index, item), where index is counted from start, and item is taken from the iterable|
+|(built-in)|`map(func, it1, [it2, ..., itN])`| appliesfuncto each item ofit, yielding the result; if N iterables are given,func must take N arguments and the iterables will be consumed in parallel|
+|itertools|`starmap(func, it)`|appliesfuncto each item ofit, yielding the result; the input iterable should yield iterable itemsiit, andfuncis applied as func(*iit)|
     
     
-    ```python
-    >>> import operator
-    >>> import itertools
-    >>> list(itertools.starmap(operator.mul, enumerate('abcdefg', 1)))
-    ['a', 'bb', 'ccc', 'dddd', 'eeeee', 'ffffff', 'ggggggg']
-    ```
+```python
+>>> import operator
+>>> import itertools
+>>> list(itertools.starmap(operator.mul, enumerate('abcdefg', 1)))
+['a', 'bb', 'ccc', 'dddd', 'eeeee', 'ffffff', 'ggggggg']
+```
+
 
 ### Generator functions that merge multiple input iterables.
 
