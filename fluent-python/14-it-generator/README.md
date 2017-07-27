@@ -73,5 +73,4 @@
 |---|---|---|
 |itertools|`groupby(it,key=None)`|yields 2-tuples of the form (key, group), where key is the grouping criterion and group is a generator yielding the items in the group|
 |(built-in)|`reversed(seq)`|yields items from seq in reverse order, from last to first; seq must be a sequence or implement the__reversed__special method|
-|itertools|`tee(it, n=2)`|yields a tuple of N generators, each yielding the items of the input iterable independently
-|
+|itertools|`tee(it, n=2)`|yields a tuple of N generators, each yielding the items of the input iterable independently|
