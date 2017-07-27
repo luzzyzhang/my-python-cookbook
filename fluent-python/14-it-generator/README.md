@@ -45,8 +45,20 @@
 ['a', 'bb', 'ccc', 'dddd', 'eeeee', 'ffffff', 'ggggggg']
 ```
 
-
 ### Generator functions that merge multiple input iterables.
+
+|module|function|description|
+|---|---|--|
+|itertools|`chain(it1, ..., itN)`|yield all items fromit1, then fromit2etc., seamlessly|
+|itertools|`chain.from_iterable(it)`|yield all items from each iterable produced byit, one after the other,
+seamlessly;itshould yield iterable items, for example, a list of iterables|
+|itertools|`product(it1, ..., itN, repeat=1)`|cartesian product: yields N-tuples made by combining items from each
+input iterable like nestedforloops could produce;repeatallows the input iterables to be consumed more than once
+|
+|(built-in)|`zip(it1, ..., itN)`|yields N-tuples built from items taken from the iterables in parallel, silently stopping when the first iterable is exhausted|
+|itertools|`zip_longest(it1, ..., itN, fillvalue=None)`|yields N-tuples built from items taken from the iterables in parallel, stopping only when the last iterable is exhausted, filling the blanks with the fillvalue|
+
+
 
 ### Generator functions that expand each input item into multiple output items.
 
