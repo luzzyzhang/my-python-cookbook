@@ -59,4 +59,14 @@
 
 ### Generator functions that expand each input item into multiple output items.
 
+|module|function|description|
+|---|---|---|
+|itertools|`combinations(it, out_len)`|yield combinations ofout_lenitems from the items yielded byit|
+|itertools|`combinations_with_replacement(it, out_len)||
+|itertools|`count(start=0, step=1)`|yield combinations ofout_lenitems from the items yielded byit,
+including combinations with repeated items.|
+|itertools|`permutations(it, out_len=None)`|yields numbers starting atstart, incremented bystep, indefinitely
+yields items fromitstoring a copy of each, then yields the entire sequence repeatedly, indefinitely|
+|itertools|`repeat(item, [times])`|yield permutations ofout_lenitems from the items yielded byit; by default,out_lenislen(list(it))|
+
 ### Rearranging generator functions
