@@ -4,6 +4,7 @@
 """
 
 import collections
+from operator import itemgetter
 from itertools import (islice, count, repeat, combinations, filterfalse,
                        cycle, groupby, chain, starmap, tee, zip_longest)
 
@@ -94,6 +95,34 @@ def powerset(iterable):
     return chain.from_iterable(combinations(s, r) for r in range(len(s) + 1))
 
 
+def unique_everseen(iterable, key=None):
+    "List unique elements, preserving order. Remember all elements ever seen."
+    # unique_everseen('AAAABBBCCDAABBB') --> A B C D
+    # unique_everseen('ABBCcAD', str.lower) --> A B C D
+    seen = set()
+    seen_add = seen.add
+    if key is None:
+        for element in filterfalse(seen.__contains__, iterable):
+            seen_add(element)
+            yield element
+    else:
+        for element in iterable:
+            k = key(element)
+            if k not in seen:
+                seen_add(k)
+                yield element
+
+
+def unique_justseen(iterable, key=None):
+    return map(next, map(itemgetter(1), groupby(iterable, key)))
+
+
+def first_true(iterable, default=False, pred=None):
+    # first_true([a, b, c], x) --> a or b or c or x
+    # first_true([a, b], x, f) --> a if f(a) else b if f(b) else x
+    return next(filter(pred, iterable), default)
+
+
 if __name__ == '__main__':
     # print(take(3, 'ABCDEF'))
     # print(list(tail(3, iter('ABCDEFG'))))
@@ -107,6 +136,11 @@ if __name__ == '__main__':
     # print(list(pairwise([0, 1, 2, 3, 4, 5, 6])))
     # print([''.join(g) for g in grouper('ABCDEFG', 3, 'x')])
     # print(list(roundrobin('ABC', 'D', 'EF')))
+
     # for part in partition(lambda x: x % 2, range(10)):
     #     print(list(part))
-    print(list(powerset([1, 2, 3])))
+    # print(list(powerset([1, 2, 3])))
+    # print([i for i in unique_everseen('AAAABBBCCDAABBB')])
+    # print([i for i in unique_everseen('ABBCcAD', str.lower)])
+    print(first_true([0, 1, 0], 'OK'))
+    print(first_true([0, 1], 'OK', lambda x: not x))
