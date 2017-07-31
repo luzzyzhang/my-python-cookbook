@@ -94,3 +94,6 @@
 >>> list(zip(*itertools.tee('ABC')))
 [('A', 'A'), ('B', 'B'), ('C', 'C')]
 ```
+
+## More Reading
+[Iterables vs. Iterators vs. Generators] (http://nvie.com/posts/iterators-vs-generators/?dt_dapp=1)

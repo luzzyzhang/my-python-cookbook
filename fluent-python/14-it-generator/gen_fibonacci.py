@@ -20,5 +20,5 @@ def fibonacci2(n):
 
 if __name__ == '__main__':
     from itertools import islice
-    print(list(islice(fibonacci(), 4)))
+    print(list(islice(fibonacci(), 0, 10)))
     print(list(fibonacci2(10)))
