@@ -26,6 +26,9 @@ class CustomOpen(object):
     
 `Generator approach using Python’s own contextlib`
 
+> In a generator decorated with @contextmanager, yield is used to split the body of the function in two parts: everything before the yield will be executed at the beginning of the while block when the interpreter calls __enter__; the code after yield will run when __exit__ is called at the end of the block.
+
+
 ```python
 from contextlib import contextmanager
 
