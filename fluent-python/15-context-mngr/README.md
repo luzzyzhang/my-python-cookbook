@@ -7,19 +7,19 @@
 
     ```python
     class CustomOpen(object):
-        def __init__(self, filename):
-            self.file = open(filename)
+	def __init__(self, filename):
+	    self.file = open(filename)
 
-        def __enter__(self):
-            return self.file
+	def __enter__(self):
+	    return self.file
 
-        def __exit__(self, ctx_type, ctx_value, ctx_traceback):
-            self.file.close()
+	def __exit__(self, ctx_type, ctx_value, ctx_traceback):
+	    self.file.close()
 
-        with CustomOpen('file') as f:
-            contents = f.read()
+	with CustomOpen('file') as f:
+		contents = f.read()
     ```
-    
+	
     `Generator approach using Python’s own contextlib`
 
     ```python
@@ -27,14 +27,14 @@
 
     @contextmanager
     def custom_open(filename):
-        f = open(filename)
-        try:
-            yield f
-        finally:
-            f.close()
+	f = open(filename)
+	try:
+	    yield f
+	finally:
+	    f.close()
 
     with custom_open('file') as f:
-        contents = f.read() 
+	contents = f.read() 
     ```
 
 
