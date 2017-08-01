@@ -1,41 +1,26 @@
 ## `iterable`
 
-```
-    Any object from which the iter built-in function can obtain an iterator.
-    Objects implementing an __iter__ method returning an iterator are iterable.
-    Sequences are always iterable;
-    so as are objects implementing a __getitem__ method which takes 0-based indexes.
-```
+> Any object from which the iter built-in function can obtain an iterator.
+> Objects implementing an `__iter__` method returning an iterator are iterable.
+> Sequences are always iterable; so as are objects implementing a `__getitem__` method which takes 0-based indexes.
 
 ## `iterator`
 
-```
-    Any object that implements the __next__ no-argument method
-    which returns the next item in a series or raises StopIteration when there are no more items.
-    Python iterators also implement the __iter__ method so they are iterable as well.
-```
+> Any object that implements the __next__ no-argument method which returns the next item in a series or raises `StopIteration` when there are no more items.
+> Python iterators also implement the `__iter__` method so they are iterable as well.
 
 ## `generator`
 
-```
-    An iterator built with a generator function or a generator expression that
-    may produce values without necessarily iterating over a collection;
-```
+> An iterator built with a generator function or a generator expression that may produce values without necessarily iterating over a collection;
 
 ## `generator function`
 
-```
-    A function that has the yield keyword in its body.
-    When invoked, a generator function returns a generator.
-```
+> A function that has the yield keyword in its body. When invoked, a generator function returns a generator.
 
 ## `generator expression`
 
-```
-    An expression enclosed in parenthesis using the same syntax of a list comprehension,
-    but returning a generator instead of a list.
-    A generator expression can be understood as a lazy version of a list comprehension. 
-```
+> An expression enclosed in parenthesis using the same syntax of a list comprehension, but returning a generator instead of a list.
+> A generator expression can be understood as a lazy version of a list comprehension. 
 
 ## Generator functions in standard library
 
