@@ -1,6 +1,6 @@
 ## `iterable`
 
-> Any object from which the iter built-in function can obtain an iterator.
+> Any object from which the `iter` built-in function can obtain an iterator.
 
 > Objects implementing an `__iter__` method returning an iterator are iterable.
 
