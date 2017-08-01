@@ -2,7 +2,10 @@
 ## `Context Manager`
 **Copy from `Kenneth Reitz's Hitchhiker Guide to Python Context Manager`**
     
+
 > A context manager is a Python object that provides extra contextual information to an action.
+
+> An object implementing both the `__enter__` and `__exit__` special methods, for use in a with block.
 
 > This extra information takes the form of running a callable upon initiating the context using the with statement, as well as running a callable upon completing all the code inside the with block
 
