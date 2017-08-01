@@ -1,6 +1,6 @@
 
 ## `Context Manager`
-    **Copy from `Hitchhiker Guide to Python Context Manager` by Kenneth Reitz**
+**Copy from `Hitchhiker Guide to Python Context Manager` by Kenneth Reitz**
     
 > A context manager is a Python object that provides extra contextual information to an action.
 
