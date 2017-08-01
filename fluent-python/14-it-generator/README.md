@@ -6,7 +6,7 @@
 
 > Sequences are always iterable; so as are objects implementing a `__getitem__` method which takes 0-based indexes.
 
-> An iterable object works as the source of items in for loops, comprehensions and tuple unpack‐ing.
+> An iterable object works as the source of items in for loops, comprehensions and tuple unpacking.
 
 ## `iterator`
 
