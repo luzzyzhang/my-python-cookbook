@@ -8,7 +8,7 @@
 
 ## `iterator`
 
-> Any object that implements the __next__ no-argument method which returns the next item in a series or raises `StopIteration` when there are no more items.
+> Any object that implements the `__next__` no-argument method which returns the next item in a series or raises `StopIteration` when there are no more items.
 
 > Python iterators also implement the `__iter__` method so they are iterable as well.
 
