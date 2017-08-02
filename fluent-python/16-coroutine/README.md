@@ -24,6 +24,16 @@ Traceback (most recent call last):
 StopIteration
 ``` 
 
+> A `coroutine` can be in one of four states. `inspect.generatorstate(...)` -> one of the strings
+
+> `GEN_CREATE`: Waiting to start execution.
+
+> `GEN_RUNNING`: Currently being executed by the interpreter.
+
+> `GEN_SUSPENDED`: Currently suspended at a yield expression.
+
+> `GEN_CLOSED`: Execution has completed.
+
 ---
 
 ## Further reading
