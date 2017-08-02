@@ -63,7 +63,7 @@ StopIteration
 >>> getgeneratorstate(my_coro2)
 'GEN_CLOSED'
 ```
-![Show coroutine]()
+![Show coroutine](https://github.com/luzzyzhang/my-python-cookbook/blob/master/fluent-python/16-coroutine/figures/simple_coro2.png)
 
 ---
 
