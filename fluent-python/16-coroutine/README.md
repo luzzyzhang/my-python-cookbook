@@ -1,4 +1,11 @@
 
+- The behavior and states of a generator operating as a coroutine.
+- Priming a coroutine automatically with a decorator.
+- How the caller can control a coroutine through the `.close()` and `.throw()` methods of the generator object
+- How coroutines can return values upon termination.
+- Usage and semantics of the new `yield from` syntax.
+- A use case: coroutines for managing concurrent activities in simulation.
+
 ---
 
 ## Further reading
