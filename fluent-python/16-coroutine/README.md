@@ -26,7 +26,7 @@ StopIteration
 
 > A `coroutine` can be in one of four states. `inspect.getgeneratorstate(...)` -> one of the strings:
 
-> `GEN_CREATE`: Waiting to start execution.
+> `GEN_CREATED`: Waiting to start execution.
 
 > `GEN_RUNNING`: Currently being executed by the interpreter.
 
