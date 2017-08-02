@@ -28,7 +28,7 @@ StopIteration
 
 > `GEN_CREATED`: Waiting to start execution.
 
-> `GEN_RUNNING`: Currently being executed by the interpreter.
+> `GEN_RUNNING`: Currently being executed by the interpreter.(You’ll only see this state in a multi-threaded application — or if the generator object calls getgenerator state on itself, which is not useful.)
 
 > `GEN_SUSPENDED`: Currently suspended at a yield expression.
 
