@@ -4,6 +4,25 @@
 - How coroutines can return values upon termination.
 - Usage and semantics of the new `yield from` syntax.
 - A use case: coroutines for managing concurrent activities in simulation.
+---
+## Basic behavior of `generator` used as `coroutine`
+
+```python
+>>> def simple_coroutine():
+...     print('-> coroutine started')
+...     x = yield
+...     print('-> coroutine received:', x)
+>>> my_coro = simple_coroutine()
+>>> my_coro
+<generator object simple_coroutine at 0x10e8d0bf8>
+>>> next(my_coro)
+-> coroutine started
+>>> my_coro.send(123)
+-> coroutine received: 42
+Traceback (most recent call last):
+    ...
+StopIteration
+``` 
 
 ---
 
