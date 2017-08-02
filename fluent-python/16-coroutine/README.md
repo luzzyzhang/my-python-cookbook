@@ -24,7 +24,7 @@ Traceback (most recent call last):
 StopIteration
 ``` 
 
-> A `coroutine` can be in one of four states. `inspect.generatorstate(...)` -> one of the strings
+> A `coroutine` can be in one of four states. `inspect.generatorstate(...)` -> one of the strings:
 
 > `GEN_CREATE`: Waiting to start execution.
 
