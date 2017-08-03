@@ -96,9 +96,9 @@ At this point, the coroutine is suspended at the `yield`, waiting for a value to
 
 The line `coro_avg.send(10)` provides that value, causing the coroutine to activate,
 
-assigning it to term, updating the total,
+assigning it to term, updating the total, count and average variables
 
-count and average variables and then starting another iteration in the while loop,
+and then starting another iteration in the while loop,
 
 which yields the average and waits for another term.
 """
