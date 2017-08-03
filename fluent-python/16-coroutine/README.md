@@ -88,7 +88,19 @@ def averager():
 15.0
 
 """
-The call next(coro_avg) makes the coroutine advance to the yield, yielding the initial value for average which is None so it does not appear on the console. At this point, the coroutine is suspended at the yield, waiting for a value to be sent. The line coro_avg.send(10) provides that value, causing the coroutine to activate, assigning it to term, updating the total, count and average variables and then starting another iteration in the while loop, which yields the average and waits for another term.
+The call `next(coro_avg)` makes the coroutine advance to the `yield`,
+
+yielding the initial value for average which is None so it does not appear on the console.
+
+At this point, the coroutine is suspended at the `yield`, waiting for a value to be sent.
+
+The line `coro_avg.send(10)` provides that value, causing the coroutine to activate,
+
+assigning it to term, updating the total,
+
+count and average variables and then starting another iteration in the while loop,
+
+which yields the average and waits for another term.
 """
 ```
 ---
