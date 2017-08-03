@@ -77,6 +77,15 @@ def averager():
         total += term
         count += 1
         average = total / count
+        
+>>> coro_avg = averager()
+>>> next(coro_avg)
+>>> coro_avg.send(10)
+10.0
+>>> coro_avg.sned(30)
+20.0
+>>> coro_avg.send(5)
+15.0
 ```
 ---
 
