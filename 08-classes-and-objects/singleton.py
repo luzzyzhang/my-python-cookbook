@@ -1,6 +1,20 @@
 # -*- coding: utf-8 -*-
 
 
+# 0. From Peter Norvig http://norvig.com/python-iaq.html
+
+def singleton(instance):
+    klass = instance.__class__
+    if hasattr(klass, '__instantiated'):
+        raise ValueError("%s is a Singleton class but is already instantiated" % klass)
+    klass.__instantiated = True
+
+
+class MyTestClass:
+    def __init__(self, *args):
+        singleton(self)
+
+
 # 1. Use __new__() method
 class Singleton(object):
     def __new__(cls, *args, **kwargs):
@@ -36,7 +50,7 @@ class Singleton2(object):
     def __new__(cls, *args, **kwargs):
         obj = object.__new__(cls, *args, **kwargs)
         obj.__dict__ = cls._state
-        print id(obj.__dict__)
+        print(id(obj.__dict__))
         return obj
 
 
@@ -77,5 +91,5 @@ if __name__ == '__main__':
     test2 = TestClass()
     # print test1.a, test2.a
     test1.a = 2
-    print test1.a, test2.a
-    print id(test1), id(test2)
+    print(test1.a, test2.a)
+    print(id(test1), id(test2))
