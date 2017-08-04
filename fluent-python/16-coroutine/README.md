@@ -19,7 +19,7 @@
 <generator object simple_coroutine at 0x10e8d0bf8>
 >>> next(my_coro)
 -> coroutine started
->>> my_coro.send(123)
+>>> my_coro.send(42)
 -> coroutine received: 42
 Traceback (most recent call last):
     ...
