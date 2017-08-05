@@ -142,6 +142,33 @@ The line `coro_avg.send(10)` provides that value, causing the coroutine to activ
 > While the delegating generator is suspended at yield from, the caller sends data directly to the subgenerator, which yields data back to the caller. The delegating generator resumes when the subgenerator returns and the interpreter raises `StopIteration` with the returned value attached
 ![Show yield from](figures/yield_from.png)
 > [`yield from` coroutine example](coroutine_averager.py)
+
+## How `yield from` work expain
+> Code there are the expansion of this single statement, in the body of the delegating generator: **`RESULT = yield from EXPR`**
+- `_i(iterator)`: The subgenerator
+- `_y(yielded)`: A value yielded from the subgnerator.
+- `_r(result)`: The eventual result, i.e. the value of the `yield from` expression when the subgen‐ erator ends.
+- `_s(sent)`: A value sent by the caller to the delegating generator, which is forwarded to the subgenerator.
+- `_e(exception)`: An exception (always an instance of `StopIteration` in this simplified pseudocode).
+```python
+RESULT = yield from EXPR
+# pseudocode equivalent to the statement RESULT = yield from EXPR in the delegating generator
+
+_i = iter(EXPR)
+try:
+    _y = next(_i)
+except StopIteration as _e:
+    _r = _e.value
+else:
+    while 1:
+        _s = yield _y
+        try:
+            _y = _i.send(_s)
+        except StopIteration as _e:
+            _r = _e.value
+            break
+RESULT = _r
+```
 ---
 
 ## Further reading
