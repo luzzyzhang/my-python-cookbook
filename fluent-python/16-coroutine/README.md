@@ -7,6 +7,8 @@
 - Usage and semantics of the new `yield from` syntax.
 - A use case: coroutines for managing concurrent activities in simulation.
 ---
+## How coroutines evolved from generators
+`yield/send` --> `@asyncio.coroutine` and `yield from` --> `async/await`(Python3.5+)
 ## Basic behavior of `generator` used as `coroutine`
 
 ```python
