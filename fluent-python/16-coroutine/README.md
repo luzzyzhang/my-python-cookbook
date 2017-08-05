@@ -8,7 +8,7 @@
 - A use case: coroutines for managing concurrent activities in simulation.
 ---
 ## How coroutines evolved from generators
-`yield/send` --> `@asyncio.coroutine` and `yield from` --> `async/await`(Python3.5+)
+`yield/send` --> `@asyncio.coroutine`(Python3.4+) and `yield from`(Python3.3+) --> `async/await`(Python3.5+)
 ## Basic behavior of `generator` used as `coroutine`
 
 ```python
