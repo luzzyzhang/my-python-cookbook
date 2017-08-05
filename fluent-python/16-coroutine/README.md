@@ -180,3 +180,5 @@ RESULT = _r
 [A Curious Course on Coroutines and Concurrency by David Beazley](http://www.dabeaz.com/coroutines/)
 
 [Tasks and coroutines](https://docs.python.org/3/library/asyncio-task.html)
+
+[Evolutionary history of Python coroutine](http://blog.guoyb.com/2016/07/03/python-coroutine/)
