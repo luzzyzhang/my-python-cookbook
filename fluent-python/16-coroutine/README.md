@@ -95,6 +95,14 @@ At this point, the coroutine is suspended at the `yield`, waiting for a value to
 The line `coro_avg.send(10)` provides that value, causing the coroutine to activate, assigning it to term, updating the total, count and average variables and then starting another iteration in the while loop, which yields the average and waits for another term.
 """
 ```
+
+## Coroutine termination and exception handling
+> One way of terminating coroutine: use `send` with some sentinel value that tells the coroutine to exit.
+> Constant built-in singleton `None` and `Ellipsis` are convenient sentinel value.
+> `StopIteration` is another sentinel value, `my_coroutine.send(StopIteration)`.
+
+> Generator objects have two methods that allows the client to explicitly send exceptions into the coroutine
+> `generator.throw(exc_type[, exc_value[, traceback]])`, `generator.close()`
 ---
 
 ## Further reading
