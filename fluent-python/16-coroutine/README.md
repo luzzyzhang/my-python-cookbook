@@ -135,6 +135,10 @@ The line `coro_avg.send(10)` provides that value, causing the coroutine to activ
 ['A', 'B', 'C', 0, 1, 2]
 ```
 > **The main feature of `yield from` is to _open a bidirectional channel_ from the outermost caller to the innermost subgenerator, so that values can be sent and yielded back and forth directly from them, and exceptions can be thrown all the way in without adding a lot of exception handling boilerplate code in the intermediate coroutines. This is what enables coroutine delegation in a way that was not possible before.**
+
+- `delegating generator`: The generator function that contains the `yield from <iterable>` expression.
+- `subgenerator`: The generator obtained from the `<iterable>` part of the `yield from` expression.
+- `caller`(`client`): The client code that calls the delegating generator.
 ---
 
 ## Further reading
