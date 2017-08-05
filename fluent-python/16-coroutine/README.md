@@ -134,6 +134,7 @@ The line `coro_avg.send(10)` provides that value, causing the coroutine to activ
 >>> list(chain(s, t))
 ['A', 'B', 'C', 0, 1, 2]
 ```
+> The main feature of yield from is to open a bidirectional channel from the outermost caller to the innermost subgenerator, so that values can be sent and yielded back and forth directly from them, and exceptions can be thrown all the way in without adding a lot of exception handling boilerplate code in the intermediate coroutines. This is what enables coroutine delegation in a way that was not possible before.
 ---
 
 ## Further reading
