@@ -43,42 +43,41 @@ Driving it with ``yield from``::
 
 """
 
-# BEGIN YIELD_FROM_AVERAGER
 from collections import namedtuple
 
 Result = namedtuple('Result', 'count average')
 
 
 # the subgenerator
-def averager():  # <1>
+def averager():
     total = 0.0
     count = 0
     average = None
     while True:
-        term = yield  # <2>
-        if term is None:  # <3>
+        term = yield
+        if term is None:
             break
         total += term
         count += 1
         average = total/count
-    return Result(count, average)  # <4>
+    return Result(count, average)
 
 
 # the delegating generator
-def grouper(results, key):  # <5>
-    while True:  # <6>
-        results[key] = yield from averager()  # <7>
+def grouper(results, key):
+    while True:
+        results[key] = yield from averager()
 
 
 # the client code, a.k.a. the caller
-def main(data):  # <8>
+def main(data):
     results = {}
     for key, values in data.items():
-        group = grouper(results, key)  # <9>
-        next(group)  # <10>
+        group = grouper(results, key)
+        next(group)
         for value in values:
-            group.send(value)  # <11>
-        group.send(None)  # important! <12>
+            group.send(value)
+        group.send(None)  # important!
 
     # print(results)  # uncomment to debug
     report(results)
@@ -106,5 +105,6 @@ data = {
 
 if __name__ == '__main__':
     main(data)
-
-# END YIELD_FROM_AVERAGER
+    print(50*'-')
+    import doctest
+    doctest.testmod()
