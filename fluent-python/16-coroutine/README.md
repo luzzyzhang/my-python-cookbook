@@ -103,6 +103,37 @@ The line `coro_avg.send(10)` provides that value, causing the coroutine to activ
 
 > Generator objects have two methods that allows the client to explicitly send exceptions into the coroutine
 > `generator.throw(exc_type[, exc_value[, traceback]])`, `generator.close()`
+
+## Using `yield from`
+> `yield from` can be used as a shortcut to yield in a for loop.
+
+```python
+>>> def gen():
+...     for c in 'ABC':
+...         yield c
+...     for i in range(1, 3):
+...         yield i
+...
+>>> list(gen())
+['A', 'B', 'C', 1, 2]
+# equal to
+>>> def gen():
+...     yield from 'ABC'
+...     yield from range(1, 3)
+...
+>>> list(gen())
+['A', 'B', 'C', 1, 2]
+
+# Didactic example only. The `itertools` module already provides an optimized chain function written in C.
+>>> def chain(*iterables):
+...     for it in iterables:
+...         yield from it
+...
+>>> s = 'ABC'
+>>> t = tuple(range(3))
+>>> list(chain(s, t))
+['A', 'B', 'C', 0, 1, 2]
+```
 ---
 
 ## Further reading
