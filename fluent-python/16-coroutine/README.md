@@ -9,8 +9,10 @@
 ---
 ## How coroutines evolved from generators
 ```
-**_`yield/send`(Python2.5+) --> `@asyncio.coroutine`(Python3.4+) and `yield from`(Python3.3+) --> `async/await`(Python3.5+)_**
+yield/send(Python2.5+) --> @asyncio.coroutine(Python3.4+) and yield from(Python3.3+) --> async/await(Python3.5+)_**
 ```
+>yield/send(Python2.5+) --> @asyncio.coroutine(Python3.4+) and yield from(Python3.3+) -->async/await(Python3.5+)_**
+
 ## Basic behavior of `generator` used as `coroutine`
 
 ```python
