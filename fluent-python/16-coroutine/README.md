@@ -145,11 +145,7 @@ The line `coro_avg.send(10)` provides that value, causing the coroutine to activ
 
 ## How `yield from` work explain
 > Code there are the expansion of this single statement, in the body of the delegating generator: **`RESULT = yield from EXPR`**
-- `_i(iterator)`: The subgenerator
-- `_y(yielded)`: A value yielded from the subgnerator.
-- `_r(result)`: The eventual result, i.e. the value of the `yield from` expression when the subgen‐ erator ends.
-- `_s(sent)`: A value sent by the caller to the delegating generator, which is forwarded to the subgenerator.
-- `_e(exception)`: An exception (always an instance of `StopIteration` in this simplified pseudocode).
+
 ```python
 RESULT = yield from EXPR
 # pseudocode equivalent to the statement RESULT = yield from EXPR in the delegating generator
@@ -169,6 +165,11 @@ else:
             break
 RESULT = _r
 ```
+- `_i(iterator)`: The subgenerator
+- `_y(yielded)`: A value yielded from the subgnerator.
+- `_r(result)`: The eventual result, i.e. the value of the `yield from` expression when the subgen‐ erator ends.
+- `_s(sent)`: A value sent by the caller to the delegating generator, which is forwarded to the subgenerator.
+- `_e(exception)`: An exception (always an instance of `StopIteration` in this simplified pseudocode).
 ---
 
 ## Further reading
