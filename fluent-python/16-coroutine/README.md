@@ -1,7 +1,7 @@
 **All of contents from the book Fluent Python, this is some note**
 
 - The *behavior* and *states* of a generator operating as a coroutine.
-- Priming a coroutine automatically with a decorator. [prime coroutine decorator example](prime_coroutine_decorator.py)
+- [Priming a coroutine automatically with a decorator](prime_coroutine_decorator.py).
 - How the caller can control a coroutine through the `.close()` and `.throw()` methods of the generator object
 - How coroutines can return values upon termination.
 - Usage and semantics of the new `yield from` syntax.
