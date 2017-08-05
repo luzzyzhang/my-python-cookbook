@@ -144,7 +144,7 @@ The line `coro_avg.send(10)` provides that value, causing the coroutine to activ
 > [`yield from` coroutine example](coroutine_averager.py)
 
 ## How `yield from` work explain
-> Code the expansion of this single statement, in the body of the delegating generator: **`RESULT = yield from EXPR`**
+> Expansion of this single statement, in the body of the delegating generator: **`RESULT = yield from EXPR`**
 
 ```python
 RESULT = yield from EXPR
