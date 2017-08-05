@@ -141,7 +141,7 @@ The line `coro_avg.send(10)` provides that value, causing the coroutine to activ
 - `caller`(`client`): The client code that calls the delegating generator.
 > While the delegating generator is suspended at yield from, the caller sends data directly to the subgenerator, which yields data back to the caller. The delegating generator resumes when the subgenerator returns and the interpreter raises `StopIteration` with the returned value attached
 ![Show yield from](figures/yield_from.png)
-**[`yield from` coroutine example](coroutine_averager.py)
+> [`yield from` coroutine example](coroutine_averager.py)
 ---
 
 ## Further reading
