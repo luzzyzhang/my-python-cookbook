@@ -7,6 +7,8 @@
 - Usage and semantics of the new `yield from` syntax.
 - A use case: coroutines for managing concurrent activities in simulation.
 
+---
+
 [Basic behavior of `generator` used as `coroutine`](#basic-behavior-of-generator-used-as-coroutine)
 
 [Coroutine termination and exception handling](#coroutine-termination-and-exception-handling)
