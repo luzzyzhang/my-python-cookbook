@@ -6,6 +6,9 @@
 - How coroutines can return values upon termination.
 - Usage and semantics of the new `yield from` syntax.
 - A use case: coroutines for managing concurrent activities in simulation.
+
+[Basic behavior of `generator` used as `coroutine`](#Basic behavior of `generator` used as `coroutine`)
+
 ---
 ## How coroutines evolved from generators
 ```shell
