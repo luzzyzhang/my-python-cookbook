@@ -30,3 +30,8 @@
 
 ## Launching processes (_truly parallel tasks_)
 > _Launching parallel tasks_. The package does enable **truly parallel computations** _because it supports distributing work among **multiple Python processes** using the ProcessPoolExecutor class_ — thus bypassing the GIL and leveraging all available CPU cores, if you need to do **`CPU-bound processing`**.
+
+## `ProcessPoolExecutor` and `ThreadPoolExecutor`
+> Both `ProcessPoolExecutor` and `ThreadPoolExecutor` implement the generic `Executor` interface, so it’s very easy to switch from a thread-based to a process-based solution using `concurrent.futures`.
+
+> For simple uses, the only notable difference between the two concrete executor classes is that `ThreadPoolExecutor.__init__ ` requires a `max_workers` argument setting the number of threads in the pool. That is an optional argument in `ProcessPoolExecutor`, and most of the time we don’t use it — _the default is the number of CPUs returned by `os.cpu_count()`_. This makes sense: for CPU bound processing it makes no sense to ask for more workers than CPUs. On the other hand, for I/O bound processing you may use 10, 100 or 1000 threads in a ThreadPoolExecutor; the best number depends on what you’re doing and the available memory, and finding the optimal number will require careful testing.
