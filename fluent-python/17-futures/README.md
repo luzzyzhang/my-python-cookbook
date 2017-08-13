@@ -14,7 +14,7 @@
 
 > The `concurrent.futures` examples are limited by the **`GIL`**, and the `flags_asyncio.py` is _single-threaded_.
 
-- How can `flags_threadpool.py` perform 5x faster than `flags.py` if Python threads are limited by a `GIL(Global Interpreter Lock)` _that only lets one thread run at any time_? [Why the GIL is nearly harmless with I/O bound processing.](
+- How can `flags_threadpool.py` perform 5x faster than `flags.py` if Python threads are limited by a `GIL(Global Interpreter Lock)` _that only lets one thread run at any time_? [Why the GIL is nearly harmless with I/O bound processing.](#blocking-io-and-the-gil)
 - How can `flags_asyncio.py` perform 5x faster than `flags.py` when both are single threaded?
 
 ## Blocking I/O and the GIL
