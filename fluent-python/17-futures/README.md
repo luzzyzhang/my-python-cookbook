@@ -6,4 +6,6 @@
 > A common refactoring when writing concurrent code: turning _the body of_ a sequential for loop _into a function_ to be called concurrently.
 
 # About the `future`
+> There are two classes named `Future` in the standard library: `concurrent.futures.Future` and `asyncio.Future`. 
+> They **serve the same purpose: an instance of either `Future` class represents a deferred computation that may or may not have completed.**
 
