@@ -4,3 +4,6 @@
 > The `flags_threadpool.py` uses the `concurrent.futures` package, while `flags_asyncio.py` uses `asyncio`.
 
 > A common refactoring when writing concurrent code: turning _the body of_ a sequential for loop _into a function_ to be called concurrently.
+
+# About the `future`
+
