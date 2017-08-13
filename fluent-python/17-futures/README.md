@@ -29,7 +29,7 @@
 > Every blocking I/O function in the Python standard library releases the GIL, allowing other threads to run. The time.sleep() function also releases the GIL. _**Therefore, Python threads are perfectly usable in I/O bound applications, despite the GIL.**_
 
 ## Launching processes (_truly parallel tasks_)
-> _Launching parallel tasks_. The package does enable **truly parallel computations** _because it supports distributing work among **multiple Python processes** using the ProcessPoolExecutor class_ — thus bypassing the GIL and leveraging all available CPU cores, if you need to do **`CPU-bound processing`**.
+> _Launching parallel tasks_. The package does enable **truly parallel computations** _because it supports distributing work among **multiple Python processes** using the `ProcessPoolExecutor` class_ — thus bypassing the GIL and leveraging all available CPU cores, if you need to do **`CPU-bound processing`**.
 
 ## `ProcessPoolExecutor` and `ThreadPoolExecutor`
 > Both `ProcessPoolExecutor` and `ThreadPoolExecutor` implement the generic `Executor` interface, so it’s very easy to switch from a thread-based to a process-based solution using `concurrent.futures`.
