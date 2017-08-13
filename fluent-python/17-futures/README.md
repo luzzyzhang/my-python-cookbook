@@ -18,4 +18,4 @@
 - How can `flags_asyncio.py` perform 5x faster than `flags.py` when both are single threaded?
 
 ## Blocking I/O and the GIL
-
+> The CPython interpreter is **not thread-safe internally**, --> so it has a **Global Interpreter Lock (GIL)** which allows only one thread at a time to execute Python bytecodes. --> That’s why a single Python process usually cannot use multiple CPU cores at the same time
