@@ -20,7 +20,7 @@
 ## Blocking I/O and the GIL
 > The CPython interpreter is **not thread-safe internally**, 
 > so it has a **Global Interpreter Lock (GIL)** which allows only one thread at a time to execute Python bytecodes. 
-> That’s why a single Python process usually cannot use multiple CPU cores at the same time
+> That’s why a single Python process usually cannot use multiple CPU cores at the same time.
 
 > When we write Python code we have no control over the GIL, but a built-in function or an extension written in C can release the GIL while running time consuming tasks. In fact, a Python library coded in C can manage the GIL, launch its own OS threads and take advantage of all available CPU cores. This complicates the code of the library con‐ siderably, and most library authors don’t do it.
 
