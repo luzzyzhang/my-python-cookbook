@@ -3,4 +3,4 @@
 > `flags_threadpool.py`, `flags_asyncio.py` make concurrent downloads: they request all images practically at the same time, and save the files as they arrive.
 > The `flags_threadpool.py` uses the `concurrent.futures` package, while `flags_asyncio.py` uses `asyncio`.
 
-> A common refactoring when writing concurrent code: turning the body of a sequential for loop into a function to be called concurrently.
+> A common refactoring when writing concurrent code: turning _the body of_ a sequential for loop _into a function_ to be called concurrently.
