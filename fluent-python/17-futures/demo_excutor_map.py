@@ -23,8 +23,8 @@ def loiter(n):
 
 def main():
     display('Script starting.')
-    executor = futures.ThreadPoolExecutor(max_workers=3)
-    results = executor.map(loiter, range(1, 6))
+    executor = futures.ThreadPoolExecutor(max_workers=3)    # change the max_workers to experiment
+    results = executor.map(loiter, range(1, 6))             # change the ragne() to experiment
     display(yellow('results:'), yellow(results))
     display(blue('Waitting for individual results:'))
     for i, result in enumerate(results):
