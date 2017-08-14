@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+"""Simple demonstration of the map method of ThreadPoolExecutor, expain how Executor.map work""
 
 from time import sleep, strftime
 from concurrent import futures
