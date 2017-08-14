@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
-"""Simple demonstration of the map method of ThreadPoolExecutor, expain how Executor.map work"""
+"""Simple demonstration of the map method of ThreadPoolExecutor
+   Expain how Executor.map work
+"""
 
 from time import sleep, strftime
 from concurrent import futures
@@ -23,8 +25,10 @@ def loiter(n):
 
 def main():
     display('Script starting.')
-    executor = futures.ThreadPoolExecutor(max_workers=3)    # change the max_workers to experiment
-    results = executor.map(loiter, range(1, 6))             # change the ragne() to experiment
+    # change the max_workers to experiment
+    executor = futures.ThreadPoolExecutor(max_workers=3)
+    # change the ragne() to experiment
+    results = executor.map(loiter, range(1, 6))
     display(yellow('results:'), yellow(results))
     display(blue('Waitting for individual results:'))
     for i, result in enumerate(results):
