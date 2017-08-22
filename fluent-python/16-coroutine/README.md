@@ -12,6 +12,7 @@
 ---
 
 **Before reading please answer this questions first**
+- What's coroutine?
 - The *behavior* and *states* of a generator operating as a coroutine.
 - [Priming a coroutine automatically with a decorator](prime_coroutine_decorator.py).
 - How the caller can control a coroutine through the `.close()` and `.throw()` methods of the generator object
