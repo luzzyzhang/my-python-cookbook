@@ -8,7 +8,7 @@
 [How yield from work explain](#how-yield-from-work-explain)
 
 [Further reading](#further-reading)
-
+---
 **Declaration: all of contents from the book Fluent Python, this is some note**
 - The *behavior* and *states* of a generator operating as a coroutine.
 - [Priming a coroutine automatically with a decorator](prime_coroutine_decorator.py).
@@ -16,10 +16,6 @@
 - How coroutines can return values upon termination.
 - Usage and semantics of the new `yield from` syntax.
 - A use case: coroutines for managing concurrent activities in simulation.
-
----
-
-
 ---
 ## How coroutines evolved from generators
 ```shell
