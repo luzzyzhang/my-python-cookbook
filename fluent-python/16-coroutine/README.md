@@ -1,4 +1,14 @@
 # Coroutine
+**Before reading please answer this questions first**
+- What's coroutine?
+- The *behavior* and *states* of a generator operating as a coroutine.
+- [Priming a coroutine automatically with a decorator](prime_coroutine_decorator.py).
+- How the caller can control a coroutine through the `.close()` and `.throw()` methods of the generator object
+- How coroutines can return values upon termination.
+- Usage and semantics of the new `yield from` syntax.
+- A use case: coroutines for managing concurrent activities in simulation.
+
+## Contents
 [Basic behavior of `generator` used as `coroutine`](#basic-behavior-of-generator-used-as-coroutine)
 
 [Coroutine termination and exception handling](#coroutine-termination-and-exception-handling)
@@ -8,17 +18,6 @@
 [How yield from work explain](#how-yield-from-work-explain)
 
 [Further reading](#further-reading)
-
----
-
-**Before reading please answer this questions first**
-- What's coroutine?
-- The *behavior* and *states* of a generator operating as a coroutine.
-- [Priming a coroutine automatically with a decorator](prime_coroutine_decorator.py).
-- How the caller can control a coroutine through the `.close()` and `.throw()` methods of the generator object
-- How coroutines can return values upon termination.
-- Usage and semantics of the new `yield from` syntax.
-- A use case: coroutines for managing concurrent activities in simulation.
 
 ---
 
