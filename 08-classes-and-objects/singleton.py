@@ -10,6 +10,12 @@ def singleton(instance):
     klass.__instantiated = True
 
 
+class YourClass:
+    "A singleton class to do something ..."
+    def __init__(self, args):
+        singleton(self)
+
+
 class MyTestClass:
     def __init__(self, *args):
         singleton(self)
