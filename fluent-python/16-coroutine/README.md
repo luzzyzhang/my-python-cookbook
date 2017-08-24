@@ -14,7 +14,7 @@
 
 - [How yield from work explain](#how-yield-from-work-explain)
 
-- [A use case: coroutines for managing concurrent activities in simulation](tax_sim.py)
+- [A use case: coroutines for managing concurrent activities in simulation](taxi_sim.py)
 
 - [Further reading](#further-reading)
 
