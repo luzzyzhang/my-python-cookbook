@@ -1,6 +1,7 @@
 # Coroutine
 **Before reading please answer this questions first**
-- What's coroutine?
+
+> What's coroutine? What u can use it for?
 
 ## Contents
 - [Basic behavior and states of `generator` used as `coroutine`](#basic-behavior-of-generator-used-as-coroutine)
