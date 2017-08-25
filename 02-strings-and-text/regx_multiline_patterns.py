@@ -6,10 +6,10 @@ text1 = '/* This is a comment */'
 text2 = '''/* This is a
            multiline comment */
         '''
-print comment.findall(text1)
-print 50*'~'
-print comment.findall(text2)
-print 50*'-'
+print(comment.findall(text1))
+print(50*'~')
+print(comment.findall(text2))
+print(50*'-')
 # Fix use pattern (?:.|\n) specifies a noncaptrure group
 comment2 = re.compile(r'/\*((?:.|\n)*?)\*/')
 print comment2.findall(text2)
