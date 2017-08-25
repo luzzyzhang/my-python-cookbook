@@ -2,7 +2,7 @@
 
 
 ## Regular Expression
-> Regex solve this problems:
+Regex solve this problems:
 > `Does this string match the pattern? or Is there a match for the pattern anywhere in this string?`
 
 > `match -- find something from the beginning of the string, and return it`
