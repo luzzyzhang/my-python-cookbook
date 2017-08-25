@@ -61,6 +61,12 @@ def is_valid_email(string):
     return True if email_pattern.match(string) else False
 assert is_valid_email('abc-123@gmail.com')
 assert not is_valid_email('abc@')
+
+# Greedy vs. Non-Greedy
+>>> re.match(r'<.*>', '<html>abc</html><a>happy</a>').group()  # greedy
+>>> '<html>abc</html><a>happy</a>'
+>>> re.match(r'<.*?>', '<html>abc</html><a>happy</a>').group()  # non-gready
+>>> '<html>'
 ```
 
 ## References
