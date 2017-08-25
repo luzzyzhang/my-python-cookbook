@@ -56,7 +56,6 @@ pattern = re.compile(r'[\w-@]+')
 mp = pattern.match('we@me')
 sp = pattern.search('you')
 ```
-> **[Regex test framework](regex_test.py)**
 
 ## References
 - [Google Python Regular Expressions](https://developers.google.com/edu/python/regular-expressions)
