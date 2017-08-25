@@ -2,14 +2,15 @@
 
 
 ## Regular Expression
-Regex solve this problems:
-> Q: `Does this string match the pattern?`
+- Regex solve this problems:
 
-> A: `match -- find something from the beginning of the string, and return it`
+  > Q: `Does this string match the pattern?`
 
-> Q: `Is there a match for the pattern anywhere in this string?`
+  > A: `match -- find something from the beginning of the string, and return it`
 
-> A: `search -- find something anywhere in the string, and return it`
+  > Q: `Is there a match for the pattern anywhere in this string?`
+
+  > A: `search -- find something anywhere in the string, and return it`
 
 - A picture is worth a thousand words
 
