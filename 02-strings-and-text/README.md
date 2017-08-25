@@ -55,6 +55,12 @@ s = re.search('r\w+@\w+', 'you@me')
 pattern = re.compile(r'[\w-@]+')
 mp = pattern.match('we@me')
 sp = pattern.search('you')
+
+def is_valid_email(string):
+    email_pattern = re.compile(r'[^@]+@[^@]+\.[^@]+')
+    return True if email_pattern.match(string) else False
+assert is_valid_email('abc-123@gmail.com')
+assert not is_valid_email('abc@')
 ```
 
 ## References
