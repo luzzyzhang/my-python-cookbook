@@ -3,11 +3,13 @@
 
 ## Regular Expression
 Regex solve this problems:
-> `Does this string match the pattern? or Is there a match for the pattern anywhere in this string?`
+> Q: `Does this string match the pattern?`
 
-> `match -- find something from the beginning of the string, and return it`
+> A: `match -- find something from the beginning of the string, and return it`
 
-> `search -- find something anywhere in the string, and return it`
+> Q: `Is there a match for the pattern anywhere in this string?`
+
+> A: `search -- find something anywhere in the string, and return it`
 
 - A picture is worth a thousand words
 
