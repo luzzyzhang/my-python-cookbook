@@ -6,7 +6,7 @@
 > A common refactoring when writing concurrent code: turning _the body of_ a sequential for loop _into a function_ to be called concurrently.
 
 ## About the `future`
-> There are two classes named `Future` in the standard library: `concurrent.futures.Future` and `asyncio.Future`. 
+> There are two classes named `Future` in the standard library: `concurrent.futures.Future` and `asyncio.Future`.
 > They **serve the same purpose: an instance of either `Future` class represents a deferred computation that may or may not have completed.**
 
 ## Good questions
@@ -18,8 +18,8 @@
 - How can `flags_asyncio.py` perform 5x faster than `flags.py` when both are single threaded?
 
 ## Blocking I/O and the GIL
-> The CPython interpreter is **not thread-safe internally**, 
-> so it has a **Global Interpreter Lock (GIL)** which allows only one thread at a time to execute Python bytecodes. 
+> The CPython interpreter is **not thread-safe internally**,
+> so it has a **Global Interpreter Lock (GIL)** which allows only one thread at a time to execute Python bytecodes.
 > That’s why a single Python process usually cannot use multiple CPU cores at the same time.
 
 > When we write Python code we have no control over the GIL, but a built-in function or an extension written in C can release the GIL while running time consuming tasks. In fact, a Python library coded in C can manage the GIL, launch its own OS threads and take advantage of all available CPU cores. This complicates the code of the library con‐ siderably, and most library authors don’t do it.
@@ -35,3 +35,8 @@
 > Both `ProcessPoolExecutor` and `ThreadPoolExecutor` implement the generic `Executor` interface, so it’s very easy to switch from a thread-based to a process-based solution using `concurrent.futures`.
 
 > For simple uses, the only notable difference between the two concrete executor classes is that `ThreadPoolExecutor.__init__ ` requires a `max_workers` argument setting the number of threads in the pool. That is an optional argument in `ProcessPoolExecutor`, and most of the time we don’t use it — _the default is the number of CPUs returned by `os.cpu_count()`_. This makes sense: for CPU bound processing it makes no sense to ask for more workers than CPUs. On the other hand, for I/O bound processing you may use 10, 100 or 1000 threads in a `ThreadPoolExecutor`; the best number depends on what you’re doing and the available memory, and finding the optimal number will require careful testing.
+
+## `threading` and `multiprocessing` alternative for flexible jobs
+
+## More reading
+[Concurrent Execution](https://docs.python.org/3/library/concurrency.html)
