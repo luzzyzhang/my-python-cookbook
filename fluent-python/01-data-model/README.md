@@ -17,7 +17,7 @@
 Normally, your code should not have many direct calls to special methods. Unless you are doing a lot of metaprogramming, you should be implementing special methods more often than invoking them explicitly. The only special method that is frequently called by user code directly is `__init__`, to invoke the initializer of the superclass in your own `__init__` implementation.
 If you need to invoke a special method, it is usually better to call the related built-in function, such as len, iter, str etc. These built-ins call the corresponding special method, but often provide other services and — for built-in types — are faster than method calls.
 
-> Avoidcreatingarbitrary,customattributeswiththe__foo__syntaxbecausesuchnames may acquire special meanings in the future, even if they are unused today.
+> Avoid creating arbitrary,custom attributes with the __foo__ syntax because such names may acquire special meanings in the future, even if they are unused today.
 
 > **By implementing special methods, __your objects__ can behave like the built-in types, en‐sabling the expressive coding style the community considers Pythonic**.
 A basic requirement for a Python object is to provide usable string representations of itself, one used for debugging and logging, another for presentation to end users. That is why the special methods `__repr__` and `__str__` exist in the Data Model.
