@@ -22,8 +22,7 @@ class FrenchDeck:
     suits = 'spades diamonds clubs hearts'.split()
 
     def __init__(self):
-        self._cards = [Card(rank, suit) for suit in self.suits
-                                        for rank in self.ranks]
+        self._cards = [Card(rank, suit) for suit in self.suits for rank in self.ranks]  # noqa
 
     def __len__(self):
         return len(self._cards)
@@ -46,12 +45,12 @@ if __name__ == '__main__':
     # beer_card = Card('7', 'diamonds')
     # print(beer_card)
     # print(50*'~')
-    # deck = FrenchDeck()
+    deck = FrenchDeck()
     # print(len(deck))
     # print(deck[0])
     # print(deck[-1])
-    # print(choice(deck))
-    # print(choice(deck))
+    print(choice(deck))
+    print(choice(deck))
     # print(50*'-')
     # print(deck[:3])
     # print(deck[12::13])
