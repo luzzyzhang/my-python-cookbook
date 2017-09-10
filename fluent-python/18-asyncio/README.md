@@ -9,6 +9,8 @@
 
 > Rob Pike [concurrency is not parallelism](http://concur.rspace.googlecode.com/hg/talk/concur.html#slide-5)
 
+Core object of asyncio
+`coroutine` `future` `task` `event-loop`
 
 [**asyncio - Asynchronous I/O, event loop, coroutines and tasks**](https://docs.python.org/3/library/asyncio.html)
 
