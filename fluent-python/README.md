@@ -3,7 +3,7 @@
 # TO-DO: Review with the Feynman Technique 
 
 ## The Python Data Model
-- 1 The Python Data Model (√)
+- 1 [The Python Data Model](https://github.com/luzzyzhang/my-python-cookbook/tree/master/fluent-python/01-data-model) (√)
 
 ## Data Structures
 - 2 An array of sequences
