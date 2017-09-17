@@ -1,6 +1,6 @@
 **Declaration: most of the content from book _Fluent Python_, thanks for the author**
 
-# TO-DO: Review with the Feynman Technique 
+# TO-DO: Review use the Feynman Technique 
 
 ## The Python Data Model
 - 1 [The Python Data Model](https://github.com/luzzyzhang/my-python-cookbook/tree/master/fluent-python/01-data-model) (√)
