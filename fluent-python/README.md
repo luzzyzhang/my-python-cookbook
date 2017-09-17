@@ -24,11 +24,11 @@
 - 13 Operator overloading: doing it right
 
 ## Control flow
-- 14 Iterables, iterators and generatos (√)
-- 15 Context managers and else blocks (√)
-- 16 Coroutines (√)
-- 17 Concurrency with futures (√)
-- 18 Concurrency with asyncio (√)
+- 14 [Iterables, iterators and generatos](https://github.com/luzzyzhang/my-python-cookbook/tree/master/fluent-python/14-it-generator) (√)
+- 15 [Context managers and else blocks](https://github.com/luzzyzhang/my-python-cookbook/tree/master/fluent-python/15-context-mngr) (√)
+- 16 [Coroutines](https://github.com/luzzyzhang/my-python-cookbook/tree/master/fluent-python/16-coroutine) (√)
+- 17 [Concurrency with futures](https://github.com/luzzyzhang/my-python-cookbook/tree/master/fluent-python/17-futures) (√)
+- 18 [Concurrency with asyncio](https://github.com/luzzyzhang/my-python-cookbook/tree/master/fluent-python/18-asyncio) (√)
 
 ## Metaprogramming
 
