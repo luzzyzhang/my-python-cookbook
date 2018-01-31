@@ -7,7 +7,7 @@ def memo(f):
     cache = {}
 
     def _f(*args):
-        print 'cache is', cache
+        print('cache is', cache)
         try:
             return cache[args]
         except KeyError:
@@ -32,10 +32,10 @@ def squre(n):
     return n * n
 
 
-print fib(4)
-print 50*'~'
-print fib(4)
-print 50*'='
-print squre(4)
-print 50*'~'
-print squre(4)
+print(fib(4))
+print(50*'~')
+print(fib(4))
+print(50*'=')
+print(squre(4))
+print(50*'~')
+print(squre(4))

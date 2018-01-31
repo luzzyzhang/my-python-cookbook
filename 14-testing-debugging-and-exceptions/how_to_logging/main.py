@@ -68,10 +68,3 @@ test_logger.addHandler(fth)
 test_logger.info('I acccess into your fields')
 test_logger.debug('You acccess into your fields')
 test_logger.error('She acccess into your fields')
-
-
-
-
-
-
-
